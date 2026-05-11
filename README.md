@@ -11,3 +11,5 @@ This repository now includes `docker-compose.yml` for Dokploy or any Compose-bas
 ```bash
 docker compose up --build -d
 ```
+
+If port `80` is already in use, set `PORT` before starting Compose.
