@@ -12,10 +12,18 @@ This repository now includes `docker-compose.yml` for Dokploy or any Compose-bas
 docker compose up --build -d
 ```
 
-By default, Compose maps host port `8080` to container port `80` to avoid collisions on hosts already using port `80`.
+The Compose service only exposes container port `80` internally and does not bind a fixed host port.
+This avoids host port conflicts in Dokploy (especially when using the Nginx template).
 
-To use a different host port, set `PORT` before starting Compose, for example:
+If you need direct local host-port access outside Dokploy, add a local Compose override:
 
 ```bash
-PORT=9090 docker compose up --build -d
+cat > docker-compose.override.yml <<'EOF'
+services:
+  maintenance-cbt-page:
+    ports:
+      - "8080:80"
+EOF
+
+docker compose up --build -d
 ```
