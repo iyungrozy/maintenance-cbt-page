@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maintenance — CBT</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #e2e8f0;
+    }
+
+    .card {
+      text-align: center;
+      padding: 3rem 2.5rem;
+      max-width: 480px;
+      width: 90%;
+    }
+
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      animation: spin 8s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #f8fafc;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 9999px;
+      padding: 0.4rem 1.1rem;
+      font-size: 0.85rem;
+      color: #64748b;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">⚙️</div>
+    <h1>Under Maintenance</h1>
+    <p>
+      The CBT system is currently undergoing scheduled maintenance.<br />
+      We'll be back online shortly. Thank you for your patience.
+    </p>
+    <span class="badge">maintenance in progress</span>
+  </div>
+</body>
+</html>
