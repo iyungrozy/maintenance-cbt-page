@@ -1,0 +1,8 @@
+services:
+  maintenance-cbt-page:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT:-80}:80"
+    restart: unless-stopped
